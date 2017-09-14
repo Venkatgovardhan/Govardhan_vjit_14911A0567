@@ -39,7 +39,7 @@ public class StudentGroup implements StudentArrayOperation {
 		// Add your implementation here
 		if(students==null)
 		{
-			throw new IllegalArgumentException;
+			throw new IllegalArgumentException();
 		}
 		else
 		{
@@ -52,7 +52,7 @@ public class StudentGroup implements StudentArrayOperation {
 		// Add your implementation here
 		if((index<0) || (index>=this.students.length))
 		{
-			throw new IllegalArgumentException;
+			throw new IllegalArgumentException();
 		}
 		else
 		{
@@ -65,7 +65,7 @@ public class StudentGroup implements StudentArrayOperation {
 		// Add your implementation here
 		if((student==null) || (index<0) || (index>=this.students.length))
 		{
-			throw new IllegalArgumentException;
+			throw new IllegalArgumentException();
 		}
 		else
 		{
@@ -78,7 +78,7 @@ public class StudentGroup implements StudentArrayOperation {
 		// Add your implementation here
 		if(student==null)
 		{
-			throw new IllegalArgumentException;
+			throw new IllegalArgumentException();
 		}
 		else
 		{			
@@ -97,7 +97,7 @@ public class StudentGroup implements StudentArrayOperation {
 		// Add your implementation here
 		if(student==null)
 		{
-			throw new IllegalArgumentException;
+			throw new IllegalArgumentException();
 		}
 		else
 		{		
@@ -152,7 +152,7 @@ public class StudentGroup implements StudentArrayOperation {
 		// Add your implementation here
 		if(student==null)
 		{
-			throw new IllegalArgumentException;
+			throw new IllegalArgumentException();
 		}
 		else
 		{
