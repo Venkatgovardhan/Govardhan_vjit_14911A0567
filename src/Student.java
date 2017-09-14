@@ -8,7 +8,8 @@ import java.util.Date;
  * or hashCode() method
  * 
  */
-public class Student implements Comparable {
+public class Student implements Comparable 
+{
 
 	/**
 	 * student id
@@ -31,52 +32,63 @@ public class Student implements Comparable {
 	 */
 	private double avgMark;
 
-	public Student(int id, String fullName, Date birthDate, double avgMark) {
+	public Student(int id, String fullName, Date birthDate, double avgMark) 
+	{
 		this.id = id;
 		this.fullName = fullName;
 		this.birthDate = birthDate;
 		this.avgMark = avgMark;
 	}
 
-	public int getId() {
+	public int getId() 
+	{
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(int id) 
+	{
 		this.id = id;
 	}
 
-	public String getFullName() {
+	public String getFullName()
+	{
 		return fullName;
 	}
 
-	public void setFullName(String fullName) {
+	public void setFullName(String fullName)
+	{
 		this.fullName = fullName;
 	}
 
-	public Date getBirthDate() {
+	public Date getBirthDate() 
+	{
 		return birthDate;
 	}
 
-	public void setBirthDate(Date birthDate) {
+	public void setBirthDate(Date birthDate)
+	{
 		this.birthDate = birthDate;
 	}
 
-	public double getAvgMark() {
+	public double getAvgMark()
+	{
 		return avgMark;
 	}
 
-	public void setAvgMark(double avgMark) {
+	public void setAvgMark(double avgMark) 
+	{
 		this.avgMark = avgMark;
 	}
 
 	@Override
-	public int hashCode() {
+	public int hashCode() 
+	{
 		return super.hashCode();
 	}
 
 	@Override
-	public boolean equals(Object obj) {
+	public boolean equals(Object obj) 
+	{
 		Student s1 = (Student) obj;
 		return (s1.id==this.id) && (s1.fullName.equals(this.fullName)) && (Double.compare(s1.avgMark, this.avgMark)==0) && (s1.birthDate.equals(this.birthDate));
 		//return super.equals(obj);
@@ -87,7 +99,8 @@ public class Student implements Comparable {
 	 * DO NOT change this method it will be used during the task check
 	 */
 	@Override
-	public int compareTo(Object o) {
+	public int compareTo(Object o)
+	{
 		Student other = (Student) o;
 		return (this.fullName.compareTo(other.fullName));
 	}
