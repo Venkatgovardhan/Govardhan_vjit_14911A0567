@@ -1,5 +1,6 @@
 import java.util.Date;
 import java.util.ArrayList;
+import java.text.ParseException;
 
 /**
  * A fix-sized array of students
@@ -313,5 +314,24 @@ public class StudentGroup implements StudentArrayOperation {
 			}
 		}
 		return students[i+1];
+	}
+	
+	public ArrayList<Student> getArrayList()
+	{
+		ArrayList<Student> array = new ArrayList<Student>();
+		for(int i=0;i<this.students.length;i++)
+		{
+			array.add(this.students[i]);
+		}
+		return array;
+	}
+	
+	public void show()
+	{
+		for(int i=0;i<this.students.length;i++)
+		{
+			System.out.print(students[i].getFullName()+"\t"+students[i].getId());
+			System.out.print(students[i].getAvgMark()+"\t"+students[i].getBirthDate());
+		}
 	}
 }
