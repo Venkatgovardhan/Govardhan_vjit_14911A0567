@@ -1,10 +1,5 @@
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Date;
-import java.util.GregorianCalendar;
 
 /**
  * A fix-sized array of students
@@ -108,7 +103,7 @@ public class StudentGroup implements StudentArrayOperation {
 			}
 			array.add(this.students.length,student);
 			this.students=(Student[]) array.toArray(students);
-			this.students[this.students.lenght]=student;
+			this.students[this.students.length]=student;
 		}
 	}
 
@@ -157,7 +152,8 @@ public class StudentGroup implements StudentArrayOperation {
 		else
 		{
 			ArrayList<Student> array=getArrayList();
-			for(int i=0;i<this.students.length;i++)
+			int i;
+			for(i=0;i<this.students.length;i++)
 			{
 				if(students[i].equals(student))
 				{
@@ -202,9 +198,10 @@ public class StudentGroup implements StudentArrayOperation {
 		else
 		{
 			ArrayList<Student> array=getArrayList();
-			for(int i=0;i<this.students.length;i++)
+			int i;
+			for(i=0;i<this.students.length;i++)
 			{
-				if(array.get(i).equals(student)
+				if(array.get(i).equals(student))
 				{
 					break;
 				}
@@ -214,6 +211,7 @@ public class StudentGroup implements StudentArrayOperation {
 				array.remove(i);
 			}
 			this.students=(Student[]) array.toArray(students);
+		}
 	}
 
 	@Override
